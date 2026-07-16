@@ -8,11 +8,9 @@ metadata:
 spec:
   project: default
   source:
-  repoURL: https://istio-release.storage.googleapis.com/charts
-  chart: base
-  targerRevision: 1.24.2
-  helm:
-    relaseName: istio-base
+    repoURL: https://istio-release.storage.googleapis.com/charts
+    chart: base
+    targetRevision: 1.24.2
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system
@@ -22,3 +20,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
