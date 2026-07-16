@@ -12,8 +12,7 @@ spec:
     chart: gateway
     targetRevision: 1.24.2
     helm:
-      skipCrds: false
-      valuesObject: {}
+      skipSchemaValidation: true
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-ingress
